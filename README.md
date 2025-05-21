@@ -191,6 +191,49 @@ Here are strategic next steps and improvement suggestions to enhance MRI image c
 
 
 
+**Results :**
+
+The Convolutional Neural Network (CNN) model was trained on preprocessed grayscale MRI images resized to 128×128 pixels. The model was trained for 15 epochs using data augmentation and categorical crossentropy loss.
+
+**Key Performance Metrics:**
+
+Metric	Value
+Training Accuracy	92%
+Validation Accuracy	87%
+Test Accuracy	86–88% (approx.)
+Number of Classes	4
+Input Image Dimensions	128 × 128 × 1
+
+Training and validation performance improved steadily across epochs. The following figures illustrate the model’s accuracy and loss trends:
+	•	Figure 1: Training vs Validation Accuracy
+	•	Figure 2: Training vs Validation Loss
+
+![model_accuracy](https://github.com/user-attachments/assets/f2e35277-9818-4a99-9b2d-a9eafc1ffc3e)
+
+![model_loss](https://github.com/user-attachments/assets/8a42194a-7d23-4115-9d61-837bd2662f5f)
+
+**Classification Report Summary**
+
+The model achieved balanced performance across all classes. Precision and recall were highest for “No Impairment” and “Moderate Impairment.” Minor overlap was observed between “Very Mild” and “Mild Impairment” classes.
+
+**Confusion Matrix**
+
+The confusion matrix below shows the number of correct and incorrect predictions per class:
+	•	Figure 3: Confusion Matrix
+
+![confusion_matrix](https://github.com/user-attachments/assets/c3ea50c5-dcc3-4f0e-9219-a6a7e4e158c3)
+
+
+The matrix confirms that most predictions lie along the diagonal, indicating high overall accuracy. The few misclassifications primarily occurred between adjacent impairment categories.
+
+
+**Output Artifacts**
+
+The following assets were generated as part of this project:
+	•	Trained Model File: mri_classification_model.h5
+	•	Training History CSV: training_history.csv
+	•	Evaluation Visuals: Accuracy, Loss, and Confusion Matrix plots
+	•	Reports: Non-technical summary and full technical documentation
 
 
 ￼
